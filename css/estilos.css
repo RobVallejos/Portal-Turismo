@@ -1,0 +1,78 @@
+.carousel { 
+	height: calc(100vh - 56px);
+}
+.carousel-inner,.carousel-item { 
+	height: 100%;
+}
+.carousel-item { 
+	background-color: #000;
+}
+.carousel-item img { 
+	height: 100%; object-fit: cover; object-position: center;
+}
+a.carousel-control:hover, a.carousel-control.right:hover {
+ background-image: linear-gradient(to right, rgba(250, 0, 0, 0) 0px, rgba(255, 0, 0, 0.5) 100%);
+}
+a.carousel-control.left:hover{
+ background-image: linear-gradient(to left, rgba(250, 0, 0, 0) 0px, rgba(255, 0, 0, 0.5) 100%);
+}
+.overlay {
+    width: 100%;
+    height: 50%;
+    background: rgb(2,0,36);
+	background: linear-gradient(180deg, rgba(2,0,36,0.8) 0%, rgba(0,0,0,0.75) 0%, rgba(244,161,161,0.025) 100%);
+}
+
+.no-padding {
+	padding: 0px;
+
+}
+.hidden{
+	visibility: hidden;
+}
+h1, h3 {
+	color: #FFFFFF;
+	text-align: center;
+}
+h1 {
+	font-size: 90px;
+}
+.h3_new {
+	padding: 0.55rem;
+	margin-bottom: 0rem;
+}
+.title_bg {
+  background-color: #2B3035;
+}		
+section{
+	min-height: 50vh;
+	padding: 25px;
+	background-color: whitesmoke;
+}
+#map{
+	height: 350px;
+}
+.img-circular{
+	border-radius: 50%;
+	width: 450px;
+	height: 300px;
+}
+.img-circular:hover{
+	box-shadow: 10%;
+}
+.centrarContenido{
+	display: flex;
+	margin: auto;
+}
+footer{
+	background-color: rgba(0, 0, 0, .05);
+}
+footer a{
+	color: #000;
+}
+.text-link{
+	color: #990000;
+}
+#main-nav{
+	background-color: rgba(0, 0, 0, .05);
+}
