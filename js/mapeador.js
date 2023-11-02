@@ -46,7 +46,7 @@ var centroIcon = L.icon({
     popupAnchor: [-3, -10]
 });
 
-var movilIcon = L.icon({
+var comercioIcon = L.icon({
     iconUrl: 'img/movilIcono.png',
     iconSize: [38, 45],
     iconAnchor: [22, 30],
@@ -54,7 +54,7 @@ var movilIcon = L.icon({
 });
 
 posic.moviles.forEach(function(movil){
-    L.marker(movil.coordenadas, {icon: movilIcon}).addTo(map).bindPopup("<b>" + movil.ubicacion + "</b><br>Horario: " + movil.horario);
+    L.marker(movil.coordenadas, {icon: comercioIcon}).addTo(map).bindPopup("<b>" + movil.ubicacion + "</b><br>Horario: " + movil.horario);
 });
 
 posic.centros.forEach(function(centro){

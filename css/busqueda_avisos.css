@@ -1,0 +1,29 @@
+#pag{
+    background-color: darkcyan;
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    grid-template-areas: 
+    "filtro filtro filtro"
+    "contenido contenido_comercios map"
+    "contenido contenido_comercios cotizaciones";
+}
+
+#filtro{
+    grid-area: filtro;
+}
+
+#map{
+    grid-area: map;
+}
+
+#cotizaciones{
+    grid-area: cotizaciones;
+}
+
+#contenido{
+    grid-area: contenido;
+}
+
+#contenido_comercios{
+    grid-area: contenido_comercios;
+}

@@ -1,4 +1,4 @@
-$(function(){
+	$(function(){
 	let cuerpoModal = $('#resultadoPrecios .modal-body .container-fluid .row');
 	let buscadorPrecios = $('#buscadorPrecios');
 	let btnPrecios = $("#btnPrecios");
