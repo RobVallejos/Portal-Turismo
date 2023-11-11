@@ -18,7 +18,7 @@ $(function(){
                 contenidoC += "<div id='asist" + centros[i].id + "' class='card mb-3'>";
                     contenidoC += "<div class='card-header'><h6>"+ centros[i].nombre +"</h6></div>";
                     contenidoC += "<div class='card-body text-start'>";
-                    contenidoC += "<p class='card-text'><b>Ubicación</b><br>"+ centros[i].direccion +"</p>";
+                    contenidoC += "<p class='card-text'><b>Dirección</b><br>"+ centros[i].direccion +"</p>";
                         contenidoC += "<p class='card-text'><b>Horario:</b><br>"+ centros[i].horario +"</h6>";
                     contenidoC += "</div>";
                 contenidoC += "</div>";
@@ -33,7 +33,7 @@ $(function(){
                 contenidoM += "<div id='asist" + moviles[i].id + "' class='card mb-3'>";
                     contenidoM += "<div class='card-header'><h6>Móvil "+ moviles[i].id +"</h6></div>";
                     contenidoM += "<div class='card-body text-start'>";
-                    contenidoM += "<p class='card-text'><b>Dirección</b><br>"+ moviles[i].ubicacion +"</p>";
+                    contenidoM += "<p class='card-text'><b>Ubicación</b><br>"+ moviles[i].ubicacion +"</p>";
                         contenidoM += "<p class='card-text'><b>Horario:</b><br>"+ moviles[i].horario +"</h6>";
                     contenidoM += "</div>";
                 contenidoM += "</div>";
