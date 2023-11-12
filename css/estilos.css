@@ -22,15 +22,8 @@ a.carousel-control.left:hover{
     background: rgb(2,0,36);
 	background: linear-gradient(180deg, rgba(2,0,36,0.8) 0%, rgba(0,0,0,0.75) 0%, rgba(244,161,161,0.025) 100%);
 }
-
-html {
-	padding-top: 50px;
-    scroll-padding-top: 50px;
-}
-
 .no-padding {
 	padding: 0px;
-
 }
 .hidden{
 	visibility: hidden;
@@ -77,4 +70,7 @@ footer a{
 }
 .text-link{
 	color: #990000;
+}
+#main-nav{
+	background-color: rgba(0, 0, 0, .05);
 }
