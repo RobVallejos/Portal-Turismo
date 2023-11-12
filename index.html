@@ -1,9 +1,10 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Turismo</title>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Turismo</title>
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -13,8 +14,8 @@
   </head>
   <body>
 
-  	<!-- 
-  		1) consulta de sitios de interés y atractivos turísticos
+	<!-- 
+  		1) consulta de sitios de interés y atractivos turísticos HECHO - DAR ESTILO
   		2) consulta de los centros y los móviles de asistencia HECHO
 		3) creación de un aviso de un producto HECHO - DAR ESTILO
 		4) comparación de precios HECHO
@@ -56,10 +57,10 @@
 
 		<!-- Carousel de lugares a visitar -->
 		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-			
+
 			<div class="carousel-inner">
 				<div class="carousel-item active" data-bs-interval="2000">
-					<img src="img/cerro.jpeg"  class="d-block w-100" alt="Cerro">
+					<img src="img/cerro.jpeg" class="d-block w-100" alt="Cerro">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Conocé lugares y atractivos de la ciudad</h5>
 					</div>
@@ -71,32 +72,38 @@
 					</div>
 				</div>
 				<div class="carousel-item" data-bs-interval="2000">
-					<img src="img/informes2.jpg"  class="d-block w-100" alt="Informes">
+					<img src="img/informes2.jpg" class="d-block w-100" alt="Informes">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Accedé a la información de la ciudad</h5>
 					</div>
 				</div>
 				<div class="carousel-item" data-bs-interval="2000">
-					<img src="img/asistencia2.jpg"  class="d-block w-100" alt="Asistencia">
+					<img src="img/asistencia2.jpg" class="d-block w-100" alt="Asistencia">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Estamos para cuidarte</h5>
 					</div>
 				</div>
 			</div>
-			<button class="hidden carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+			<button class="hidden carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+				data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Previous</span>
 			</button>
-			<button class="hidden carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+			<button class="hidden carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+				data-bs-slide="next">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Next</span>
 			</button>
 
 			<div class="carousel-indicators">
-				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
-				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
-				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="3" aria-label="Slide 3"></button>
+				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
+					aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
+					aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
+					aria-label="Slide 3"></button>
+				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="3"
+					aria-label="Slide 3"></button>
 			</div>
 		</div>
 	</div>
@@ -106,17 +113,17 @@
 		<div class="row d-flex flex-row justify-content-center alig-items-center col-md-12 mt-3">
 			<div class="text-center col-md-6">
 				<img src="img/cascada.jpeg" class="img-circular col-md-12 mb-2" alt="Lugares y atractivos">
-			    <h4 class="card-text mt-3">Conocé los lugares que podés visitar y sus diferentes atractivos.</h4>
-			    <a href="#" class="btn btn-outline-secondary own-btn">Ver más</a>
+				<h4 class="card-text mt-3">Conocé los lugares que podés visitar y sus diferentes atractivos.</h4>
+				<a href="lugares.html" class="btn btn-outline-secondary own-btn">Ver más</a>
 			</div>
 			<div class="text-center col-md-6">
 				<img src="img/cine.jpeg" class="img-circular col-md-12 mb-2" alt="Cine y obras">
-			    <h4 class="card-text mt-3">Todo la oferta de cine ambulante y obras de artistas locales.</h4>
-			    <a href="#" class="btn btn-outline-secondary own-btn">Ver más</a>
+				<h4 class="card-text mt-3">Todo la oferta de cine ambulante y obras de artistas locales.</h4>
+				<a href="eventos.html" class="btn btn-outline-secondary own-btn">Ver más</a>
 			</div>
 		</div>
 	</section>
-	
+
 	<!-- Buscador -->
 	<section id="buscador">
 		<div class="row">
@@ -134,11 +141,11 @@
 			</div>
 
 			<div class="col-md-6">
-				<img src="img/buscador.jpg"  class="d-block col-md-10" alt="Productos y servicios">
+				<img src="img/buscador.jpg" class="d-block col-md-10" alt="Productos y servicios">
 			</div>
 		</div>
 	</section>
-	
+
 
 	<!-- Centros y móviles de asistencia -->
 	<section id="asistencia">
@@ -153,10 +160,10 @@
 					<h4 class="card-text py-4 font-light">Estamos para acompañarte en tu estadía. Por ello ponemos a disposición centros de asistencia ubicados en lugares estratégicos y móviles que recorren la ciudad para estar más cerca tuyo.</h4>
 					<h4 class="card-text font-light">Si querés conocer todos los puntos asistenciales ingresá <a href="infoAsistencia.html"><span class="bolder">aquí</span></a></h4>
 				</div>
-			</div>		
+			</div>
 		</div>
 	</section>
-	
+
 
 
     <!-- BORRAR Funcionalidad para traer precios sugeridos -->
@@ -172,22 +179,23 @@
 	</nav> -->
 
 	<!-- Modal precios sugeridos -->
-	<div class="modal fade" id="resultadoPrecios" tabindex="-1" aria-labelledby="exampleModalLabel" >
-	  	<div class="modal-dialog modal-xl modal-dialog-scrollable">
-	  		<div class="modal-content">
-	  			<div class="modal-header">
+	<div class="modal fade" id="resultadoPrecios" tabindex="-1" aria-labelledby="exampleModalLabel">
+		<div class="modal-dialog modal-xl modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
 					<h1 class="modal-title fs-5" style='color: black;' id="exampleModalLabel">Precios sugeridos</h1>
-					<button type="button" id="closeModal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<button type="button" id="closeModal" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
 				</div>
-	  	    	<div class="modal-body">
-	  				<div class="container-fluid">
-	  					<div class="row">
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
 
-	  					</div>
+						</div>
 					</div>
-		    	</div>
+				</div>
 			</div>
-	    </div>
+		</div>
 	</div>
 
 	<!-- Footer -->
@@ -230,8 +238,11 @@
 
 
 	<!-- Herramientas online -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+		integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 	<!-- Archivos propios -->
