@@ -19,6 +19,13 @@ let lugares = [
                 resumen: "Cabaña para estadía y con vistas fascinantes",
                 descripcion: "La Cabaña Aurora combina la calidez rústica con comodidades modernas. En su interior, encontrarás una acogedora sala de estar con una chimenea que crepita, ideal para las noches frescas de montaña. Grandes ventanales permiten que la luz natural inunde el espacio y te conecten con la belleza exterior en todo momento. La decoración, inspirada en la naturaleza circundante, crea una atmósfera tranquila y relajante.",
                 foto: "./img/cabaña.png"
+            },
+            {
+                id: "l1a3",
+                nombre: "Bungee Jumping",
+                resumen: "Plataforma para realizar Bungee Jumping",
+                descripcion: "Sumérgete en una experiencia emocionante que desafiará tus límites y te llevará a la cima de la adrenalina. Aquí, en lo alto de la montaña, te espera una plataforma audaz para el bungee jumping, suspendida sobre un abismo que ofrece vistas impresionantes.",
+                foto: "img/bungee.png"
             }
         ]
     },
@@ -62,7 +69,7 @@ function mostrarLugares() {
                 contenidoLugares += "<div class='col border text-center'>Foto</div>"
             contenidoLugares += "</div>"
             contenidoLugares += "<div class='row'>"
-                contenidoLugares += "<div class='col-sm'><img src='" + lugares[i].foto + "' class='d-flex img-lugar'></div>"
+                contenidoLugares += "<div class='col-sm'><img src='" + lugares[i].foto + "' class='d-flex img-lugar img-fluid'></div>"
             contenidoLugares += "</div>"
             
             contenidoLugares += "<div class='row'>"
