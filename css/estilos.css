@@ -1,3 +1,7 @@
+body{
+	background-color: whitesmoke;
+}
+
 .carousel { 
 	height: calc(100vh - 56px);
 }
@@ -35,6 +39,9 @@ h1, h3 {
 h1 {
 	font-size: 90px;
 }
+
+
+
 .h3_new {
 	padding: 0.55rem;
 	margin-bottom: 0rem;
@@ -46,13 +53,17 @@ section{
 	min-height: 50vh;
 	padding: 25px;
 	background-color: whitesmoke;
+	margin: 0 10%;
 }
-#map{
-	height: 350px;
+#divMapAsistencia{
+	padding: 15px;
+}
+#mapAsistencia{
+	height: 300px;
 }
 .img-circular{
 	border-radius: 50%;
-	width: 450px;
+	width: 300px;
 	height: 300px;
 }
 .img-circular:hover{
@@ -73,4 +84,56 @@ footer a{
 }
 #main-nav{
 	background-color: rgba(0, 0, 0, .05);
+}
+
+.font-light{
+	font-weight: lighter;
+}
+.font-bold{
+	font-weight: 800;
+}
+.bolder{
+	color: #990000;
+	font-weight: 500;
+	cursor: pointer;
+}
+.bolder:hover{
+	border-bottom: 1px solid  #990000;
+}
+.own-btn{
+	color: #990000;
+	border: 1px solid #990000;
+}
+
+
+.own-btn:hover{
+	background-color: rgba(153, 0, 0, .5);
+}
+.own-nav{
+	background-color: rgba(238, 238, 238, .8);
+}
+.own-nav:hover{
+	background-color: rgba(153, 0, 0, .5);
+}
+
+.own-nav a:hover{
+	color: #eee;
+}
+.card-asist{
+	width: 265px;
+}
+.card-asist p{
+	font-size: .90em;
+}
+
+/* Asistencia */
+.d-flex{
+	padding-left: 0px;
+}
+#datosCentros, #datosMoviles{
+	height: 197px;
+	overflow-y: scroll;
+}
+a{
+	text-decoration: none;
 }
