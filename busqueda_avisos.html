@@ -20,110 +20,97 @@
 <body>
 
     <!-- Nav -->
-    <nav class="navbar position-relative" id="main-nav">
+    <nav class="navbar navbar-expand-sm sticky-top own-nav" id="main-nav">
         <div class="container-fluid">
-            <ul class="nav justify-content-end">
-                <li class="nav-item">
-                    <a class="nav-link text-link" href="./index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-link" href="./busqueda_avisos.html">Buscador</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-link" href="./creador_avisos.html">Soy comerciante</a>
-                </li>
-            </ul>
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link text-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-link" href="#">Buscador</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-link" href="infoAsistencia.html">Servicio de asistencia</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-link" href="creador_avisos.html">Soy comerciante</a>
+            </li>
+          </ul>
         </div>
-    </nav>
+      </nav>
 
-    <div id="pag">
+        <div id="filtro" class="container-fluid mt-4">
+            <div class="row">
+                <div class="col-md-9">
+                    <h3 id="tituloBuscador" class="text-start">Buscador de artículos, servicios y comercios</h3>
+                    <div class="d-flex" role="search">
+                        <input id="inputBusqueda" class="form-control me-2" type="search" placeholder="Alfajores" aria-label="Search">
+                        <button id="buscador" class="btn own-btn">Buscar</button>
+                    </div>
+                    <div class="checkbox-container py-3 mx-2">
 
-
-
-        <div id="filtro" class="container-fluid " style="padding: 2%;">
-            <div class="">
-                <div class="col-md-8">
-                    <!-- Main content here -->
-                </div>
-                <div class="col-md-4">
-                    <div class="checkbox-container">
-
-                        <h4>Filtros de busqueda por categoria</h4>
+                        <b>Filtrar: </b>
 
                         <!-- Resta Modificar los filtros-->
-                        <label for="Supermercado">Supermercado</label>
-                        <input name="Supermercado" type="checkbox" id="Supermercado" value="Supermercado" checked>
+                        <small class="text-muted"><label for="Supermercado">Supermercado</label></small>
+                        <input name="Supermercado" type="checkbox" id="Supermercado" value="Supermercado">
 
-                        <label for="Perfumeria">Perfumeria</label>
-                        <input name="Perfumeria" type="checkbox" id="Perfumeria" value="Perfumeria" checked>
+                        <small class="text-muted"><label for="Perfumeria">Perfumeria</label></small>
+                        <input name="Perfumeria" type="checkbox" id="Perfumeria" value="Perfumeria">
 
-                        <label for="Otros">Otros</label>
-                        <input name="Otros" type="checkbox" id="Otros" value="Otros" checked>
+                        <small class="text-muted"><label for="Otros">Otros</label></small>
+                        <input name="Otros" type="checkbox" id="Otros" value="Otros">
 
                     </div>
 
-                    <button id="actualizar-filtros">Aplicar filtro</button>
-                    <button id="ver-todo">Ver todos los productos</button>
+                    <div id="divFiltros" class="mx-2 py-2">
+                        <button id="actualizar-filtros" class="btn own-btn">Aplicar filtro</button>
+                        <button id="ver-todo" class="btn own-btn">Ver todos los productos</button>
+                    </div>
+                    
 
                 </div>
-            </div>
-            <div>
 
-                <h4>Busca avisos por nombre</h4>
-
-                <div>
-
-                    <input name="inputBusqueda" type="search" id="inputBusqueda">
-                    <button id="buscador">Buscar</button>
-                </div>
-
-
-
-            </div>
-        </div>
-
-
-        <!-- Mapa con los comercios -->
-        <section id="map">
-            <div class="row g-0" style="width: 600px; height: 400px;" class="container">
-                <div class="col-md-4">
-                    <div id="map"> <!-- Acá va un mapa --> </div>
+                <div id="cotizaciones" class="col-md-3">
+                    <iframe width="300px" height="690px" src="https://www.dolarsi.com/func/moduloArriba-n.html" frameborder="0"
+                        scrolling="0" allowfullscreen=""></iframe>
                 </div>
             </div>
-        </section>
-
-        <div id="contenido" class="">
-            <div>
-                <h2>Aca los productos buscados</h2>
-
-            </div>
-
-            <div id="cuerpoAvisos" class="container-fluid row align-items-start" style="padding: 1%;">
-            </div>
-
         </div>
 
-        <div id="contenido_comercios" class="">
-            <div>
-                <h2>Aca se muestran los comercios en los cuales hay los productos buscados</h2>
-
-            </div>
-            <div id="cuerpoComercios" class="container-fluid row align-items-start" style="padding: 1%;">
-            </div>
-
+        <div id="vacio">
+            <h1>&nbsp;</h1>
         </div>
+        
+        <div id="bigContainer" class="row g-0">
+            <!-- Resultados Productos -->
+            <div id="contenedorAvisos" class="col-md-5" hidden>
+                <h4 class="mx-3">Productos:</h4>
+                <div id="cuerpoAvisos" class="container-fluid">
+                    <div class="row">
 
+                    </div>
+                </div>
+            </div>
 
+            <!-- Resultados Comercios -->
+            <div id="contenedorComercios" class="col-md-3" hidden>
+                <h4 class="mx-3">Comercios:</h4>
+                <div id="cuerpoComercios" class="container-fluid">
+                    <div class="row">
 
+                    </div>
+                </div>
+            </div>
 
-
-        <div id="cotizaciones">
-            <iframe width="300px" height="690px" src="https://www.dolarsi.com/func/moduloArriba-n.html" frameborder="0"
-                scrolling="0" allowfullscreen=""></iframe>
+            <!-- Mapa con los comercios -->
+            <div id="contenedorMapaComercios" class="col-md-4" style="opacity:0;">
+                <h4>&nbsp;</h4>
+                <div id="mapComercios"> 
+                    <!-- Acá va un mapa --> 
+                </div>
+            </div>
         </div>
-
-
-    </div>
 
     <footer class="py-3">
         <ul class="nav justify-content-center border-bottom pb-3 mb-3">

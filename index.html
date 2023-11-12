@@ -29,20 +29,20 @@
         <div class="container-fluid">
           <ul class="nav justify-content-end">
             <li class="nav-item">
-                <a class="nav-link text-link" href="./index.html">Inicio</a>
+                <a class="nav-link text-link" href="index.html">Inicio</a>
               </li>
 
             <li class="nav-item">
               <a class="nav-link text-link active" aria-current="page" href="#actividades">Qué hacer</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-link" href="./busqueda_avisos.html">Buscador</a>
+              <a class="nav-link text-link" href="busqueda_avisos.html">Buscador</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-link" href="#asistencia">Servicio de asistencia</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-link" href="./creador_avisos.html">Soy comerciante</a>
+              <a class="nav-link text-link" href="creador_avisos.html">Soy comerciante</a>
             </li>
           </ul>
         </div>
@@ -130,18 +130,15 @@
 			<div class="col-md-6 py-4 px-2 d-flex align-items-center">
 				<div class="card-body text-center">
 					<h3 class="card-title">Encontrá lo que necesites</h3>
-					<h4 class="card-text py-4 font-light">Te ayudamos en la búsqueda de comercios de la ciudad y de servicios y artículos que ellos ofrecen</h4>
-					<form class="d-flex col-md-10 offset-md-1" role="search">
-						<input id="buscador" class="form-control me-2" type="search" placeholder="Prueba con 'mate de acero' o 'lavadero'" aria-label="Search">
-						<button id="btnBuscar" class="btn btn-outline-secondary own-btn" type="button" data-bs-toggle="modal" data-bs-target="#resultadoBusqueda">
-						Buscar
-						</button>
-					</form>
+					<h4 class="card-text py-3 font-light">Te ayudamos en la búsqueda de comercios de la ciudad y de servicios y artículos que ellos ofrecen.</h4>
+					<h4 class="card-text font-light">Además podrás visualizar su ubicación en un mapa de la ciudad para que elijas el que te quede más cerca.</h4>
 				</div>
 			</div>
 
 			<div class="col-md-6">
-				<img src="img/buscador.jpg" class="d-block col-md-10" alt="Productos y servicios">
+				<a href="busqueda_avisos.html">
+					<img src="img/buscador.jpg" class="d-block col-md-10" alt="Productos y servicios">
+				</a>
 			</div>
 		</div>
 	</section>
@@ -157,7 +154,7 @@
 			<div class="col-md-8 px-4">
 				<div class="card-body text-center">
 					<h3 class="card-title py-3">Asistencia al viajero: dónde encontrarnos</h3>
-					<h4 class="card-text py-4 font-light">Estamos para acompañarte en tu estadía. Por ello ponemos a disposición centros de asistencia ubicados en lugares estratégicos y móviles que recorren la ciudad para estar más cerca tuyo.</h4>
+					<h4 class="card-text py-3 font-light">Estamos para acompañarte en tu estadía. Por ello ponemos a disposición centros de asistencia ubicados en lugares estratégicos y móviles que recorren la ciudad para estar más cerca tuyo.</h4>
 					<h4 class="card-text font-light">Si querés conocer todos los puntos asistenciales ingresá <a href="infoAsistencia.html"><span class="bolder">aquí</span></a></h4>
 				</div>
 			</div>
@@ -244,9 +241,5 @@
 	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
 		integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-	<!-- Archivos propios -->
-	<script type="text/javascript" src="js/precios.js"></script>
- 
   </body>
 </html>
