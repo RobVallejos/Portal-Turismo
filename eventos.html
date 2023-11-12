@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Eventos</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="css/estilos-eventos.css" />
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <header>
+    <nav class="navbar fixed-top bg-white" id="main-nav">
+      <div class="container-fluid">
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link text-link active" aria-current="page" href="#obras">Obras</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-link" href="#cines">Cines</a>
+          </li>
+        </ul>
+        <ul class="nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link text-link" href="index.html">Regresar</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div id="eventos-container" class="container-fluid">
+      <h3 class="text-center">En esta sección del portal podrá ver la oferta de eventos locales que se presentan en la ciudad</h3>
+      <h4 class="text-center">Presione los botones de abajo para explorar la oferta de eventos</h4>
+      <section aria-labelledby="obras">
+        <h2 id="obras" class="border rounded-top border-dark">Obras de artistas locales</h2>
+        <p><a class="btn btn-primary w-100" data-bs-toggle="collapse" href="#obras-card" role="button"
+            aria-expanded="false" aria-controls="obras-card">Ver oferta de obras</a></p>
+        <div class="collapse" id="obras-card">
+          <div class="card card-body" id="obras-div"></div>
+        </div>
+      </section>
+      <section aria-labelledby="cines">
+        <h2 id="cines" class="border rounded-top border-dark">Cines ambulantes</h2>
+        <p><a class="btn btn-primary w-100" data-bs-toggle="collapse" href="#cines-card" role="button"
+            aria-expanded="false" aria-controls="cines-card">Ver oferta de cines</a></p>
+        <div class="collapse" id="cines-card">
+          <div class="card card-body" id="cines-div"></div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+  <footer>
+    <!-- place footer here -->
+  </footer>
+
+  <script type="text/javascript" src="/js/eventos.js"></script>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

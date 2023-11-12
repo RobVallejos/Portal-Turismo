@@ -1,18 +1,21 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Turismo</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-	crossorigin=""/>
-	<link rel="stylesheet" href="css/estilos.css"/>
-  </head>
-  <body>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Turismo</title>
 
-  	<!-- 
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+		integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+	<link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body>
+
+	<!-- 
   		1) consulta de sitios de interés y atractivos turísticos
   		2) consulta de los centros y los móviles de asistencia
 		3) creación de un aviso de un producto
@@ -22,24 +25,24 @@
 		6.2) cotización de divisas
   	-->
 
-    <!-- Nav -->
-    <nav class="navbar position-relative" id="main-nav">
-	  <div class="container-fluid">
-	    <ul class="nav justify-content-end">
-		  <li class="nav-item">
-		    <a class="nav-link text-link active" aria-current="page" href="#actividades">Qué hacer</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link text-link" href="#buscador">Buscador</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link text-link" href="#asistencia">Servicio de asistencia</a>
-		  </li>
-		  <li class="nav-item">
-		    <a class="nav-link disabled" aria-disabled="true">Soy comerciante</a>
-		  </li>
-		</ul>
-	  </div>
+	<!-- Nav -->
+	<nav class="navbar fixed-top bg-white" id="main-nav">
+		<div class="container-fluid">
+			<ul class="nav justify-content-end">
+				<li class="nav-item">
+					<a class="nav-link text-link active" aria-current="page" href="#actividades">Qué hacer</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-link" href="#buscador">Buscador</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link text-link" href="#asistencia">Servicio de asistencia</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link disabled" aria-disabled="true">Soy comerciante</a>
+				</li>
+			</ul>
+		</div>
 	</nav>
 
 	<!-- Carousel + titulo -->
@@ -51,10 +54,10 @@
 
 		<!-- Carousel de lugares a visitar -->
 		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-			
+
 			<div class="carousel-inner">
 				<div class="carousel-item active" data-bs-interval="2000">
-					<img src="img/cerro.jpeg"  class="d-block w-100" alt="Cerro">
+					<img src="img/cerro.jpeg" class="d-block w-100" alt="Cerro">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Conocé lugares y atractivos de la ciudad</h5>
 					</div>
@@ -66,76 +69,85 @@
 					</div>
 				</div>
 				<div class="carousel-item" data-bs-interval="2000">
-					<img src="img/informes2.jpg"  class="d-block w-100" alt="Informes">
+					<img src="img/informes2.jpg" class="d-block w-100" alt="Informes">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Accedé a la información de la ciudad</h5>
 					</div>
 				</div>
 				<div class="carousel-item" data-bs-interval="2000">
-					<img src="img/asistencia2.jpg"  class="d-block w-100" alt="Asistencia">
+					<img src="img/asistencia2.jpg" class="d-block w-100" alt="Asistencia">
 					<div class="carousel-caption d-none d-md-block">
 						<h5>Estamos para cuidarte</h5>
 					</div>
 				</div>
 			</div>
-			<button class="hidden carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+			<button class="hidden carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+				data-bs-slide="prev">
 				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Previous</span>
 			</button>
-			<button class="hidden carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+			<button class="hidden carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+				data-bs-slide="next">
 				<span class="carousel-control-next-icon" aria-hidden="true"></span>
 				<span class="visually-hidden">Next</span>
 			</button>
 
 			<div class="carousel-indicators">
-				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
-				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
-				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="3" aria-label="Slide 3"></button>
+				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
+					aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
+					aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2"
+					aria-label="Slide 3"></button>
+				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="3"
+					aria-label="Slide 3"></button>
 			</div>
 		</div>
 	</div>
-	
-	
+
+
 	<!-- Atractivos y eventos -->
 	<section id="actividades">
 		<div class="row d-flex flex-row justify-content-center alig-items-center col-md-12 mt-3">
 			<div class="text-center col-md-6">
 				<img src="img/cascada.jpeg" class="img-circular col-md-12 mb-2" alt="Lugares y atractivos">
-			    <h4 class="card-text mt-3">Conocé los lugares que podés visitar y sus diferentes atractivos.</h4>
-			    <a href="#" class="btn btn-outline-secondary">Ver más</a>
+				<h4 class="card-text mt-3">Conocé los lugares que podés visitar y sus diferentes atractivos.</h4>
+				<a href="lugares.html" class="btn btn-outline-secondary">Ver más</a>
 			</div>
 			<div class="text-center col-md-6">
 				<img src="img/cine.jpeg" class="img-circular col-md-12 mb-2" alt="Cine y obras">
-			    <h4 class="card-text mt-3">Todo la oferta de cine ambulante y obras de artistas locales.</h4>
-			    <a href="#" class="btn btn-outline-secondary">Ver más</a>
+				<h4 class="card-text mt-3">Todo la oferta de cine ambulante y obras de artistas locales.</h4>
+				<a href="eventos.html" class="btn btn-outline-secondary">Ver más</a>
 			</div>
 		</div>
 
 	</section>
-	
+
 	<!-- Buscador -->
 	<section id="buscador">
 		<div class="row">
 			<div class="col-md-6 py-4 px-2 d-flex align-items-center">
 				<div class="card-body text-center">
 					<h3 class="card-title">Encontrá lo que necesites</h3>
-					<h4 class="card-text py-4">Te ayudamos en la búsqueda de comercios de la ciudad y de servicios y artículos que ellos ofrecen</h4>
+					<h4 class="card-text py-4">Te ayudamos en la búsqueda de comercios de la ciudad y de servicios y
+						artículos que ellos ofrecen</h4>
 					<form class="d-flex col-md-10 offset-md-1" role="search">
-						<input id="buscador" class="form-control me-2" type="search" placeholder="Prueba con 'mate de acero' o 'lavadero'" aria-label="Search">
-						<button id="btnBuscar" class="btn btn-outline-secondary" type="button" data-bs-toggle="modal" data-bs-target="#resultadoBusqueda">
-						Buscar
+						<input id="buscador" class="form-control me-2" type="search"
+							placeholder="Prueba con 'mate de acero' o 'lavadero'" aria-label="Search">
+						<button id="btnBuscar" class="btn btn-outline-secondary" type="button" data-bs-toggle="modal"
+							data-bs-target="#resultadoBusqueda">
+							Buscar
 						</button>
 					</form>
 				</div>
 			</div>
 
 			<div class="col-md-6">
-				<img src="img/buscador.jpg"  class="d-block col-md-10" alt="Productos y servicios">
+				<img src="img/buscador.jpg" class="d-block col-md-10" alt="Productos y servicios">
 			</div>
 		</div>
 	</section>
-	
+
 
 	<!-- Centros y móviles de asistencia -->
 	<section id="asistencia">
@@ -147,66 +159,74 @@
 			<div class="col-md-8 px-4">
 				<div class="card-body">
 					<h5 class="card-title">Card title</h5>
-					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+					<p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+						additional content. This content is a little bit longer.</p>
 					<p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
 				</div>
-			</div>		
+			</div>
 		</div>
 	</section>
-	
 
 
-    <!-- Funcionalidad para traer precios sugeridos -->
+
+	<!-- Funcionalidad para traer precios sugeridos -->
 	<nav class="navbar bg-body-tertiary">
-	  <div class="container-fluid">
-	    <form class="d-flex" role="search">
-	      <input id="buscadorPrecios" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-		      <button id="btnPrecios" class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#resultadoPrecios">
-		    	Ver precios
-		  	</button>
-	    </form>
-	  </div>
+		<div class="container-fluid">
+			<form class="d-flex" role="search">
+				<input id="buscadorPrecios" class="form-control me-2" type="search" placeholder="Search"
+					aria-label="Search">
+				<button id="btnPrecios" class="btn btn-primary" type="button" data-bs-toggle="modal"
+					data-bs-target="#resultadoPrecios">
+					Ver precios
+				</button>
+			</form>
+		</div>
 	</nav>
 
 	<!-- Modal precios sugeridos -->
-	<div class="modal fade" id="resultadoPrecios" tabindex="-1" aria-labelledby="exampleModalLabel" >
-	  	<div class="modal-dialog modal-xl modal-dialog-scrollable">
-	  		<div class="modal-content">
-	  			<div class="modal-header">
+	<div class="modal fade" id="resultadoPrecios" tabindex="-1" aria-labelledby="exampleModalLabel">
+		<div class="modal-dialog modal-xl modal-dialog-scrollable">
+			<div class="modal-content">
+				<div class="modal-header">
 					<h1 class="modal-title fs-5" style='color: black;' id="exampleModalLabel">Precios sugeridos</h1>
-					<button type="button" id="closeModal" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					<button type="button" id="closeModal" class="btn-close" data-bs-dismiss="modal"
+						aria-label="Close"></button>
 				</div>
-	  	    	<div class="modal-body">
-	  				<div class="container-fluid">
-	  					<div class="row">
+				<div class="modal-body">
+					<div class="container-fluid">
+						<div class="row">
 
-	  					</div>
+						</div>
 					</div>
-		    	</div>
+				</div>
 			</div>
-	    </div>
+		</div>
 	</div>
 
 	<!-- Footer -->
 	<footer class="py-3">
-	    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-	      <li class="nav-item"><a href="#" class="nav-link px-2 text-link">Inicio</a></li>
-	      <li class="nav-item"><a href="#actividades" class="nav-link px-2 text-link">Actividades</a></li>
-	      <li class="nav-item"><a href="#buscador" class="nav-link px-2 text-link">Buscador</a></li>
-	      <li class="nav-item"><a href="#asistencia" class="nav-link px-2 text-link">Asistencia al viajero</a></li>
-	    </ul>
-	    <p class="text-center text-muted">© 2023 Municipio del Valle - Secretaría de Turismo</p>
-	  </footer>
+		<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+			<li class="nav-item"><a href="#" class="nav-link px-2 text-link">Inicio</a></li>
+			<li class="nav-item"><a href="#actividades" class="nav-link px-2 text-link">Actividades</a></li>
+			<li class="nav-item"><a href="#buscador" class="nav-link px-2 text-link">Buscador</a></li>
+			<li class="nav-item"><a href="#asistencia" class="nav-link px-2 text-link">Asistencia al viajero</a></li>
+		</ul>
+		<p class="text-center text-muted">© 2023 Municipio del Valle - Secretaría de Turismo</p>
+	</footer>
 
 
 	<!-- Herramientas online -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+		integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
 	<!-- Archivos propios -->
 	<script type="text/javascript" src="js/precios.js"></script>
-    <script type="text/javascript" src="js/mapeador.js"></script>
- 
-  </body>
+	<script type="text/javascript" src="js/mapeador.js"></script>
+
+</body>
+
 </html>
