@@ -26,10 +26,8 @@ a.carousel-control.left:hover{
     background: rgb(2,0,36);
 	background: linear-gradient(180deg, rgba(2,0,36,0.8) 0%, rgba(0,0,0,0.75) 0%, rgba(244,161,161,0.025) 100%);
 }
-
 .no-padding {
 	padding: 0px;
-
 }
 .hidden{
 	visibility: hidden;
@@ -63,6 +61,8 @@ section{
 #mapAsistencia{
 	height: 300px;
 }
+
+
 .img-circular{
 	border-radius: 50%;
 	width: 300px;
@@ -84,7 +84,6 @@ footer a{
 .text-link{
 	color: #990000;
 }
-
 .font-light{
 	font-weight: lighter;
 }
@@ -109,7 +108,8 @@ footer a{
 	background-color: rgba(153, 0, 0, .5);
 }
 .own-nav{
-	background-color: rgba(238, 238, 238, .8);
+	background-color: rgba(0, 0, 0, .3);
+	border-bottom: 1px solid #990000;
 }
 .own-nav:hover{
 	background-color: rgba(153, 0, 0, .5);
@@ -135,4 +135,33 @@ footer a{
 }
 a{
 	text-decoration: none;
+}
+#cotizaciones{
+	height: 220px;
+	margin-bottom: 20px;
+	overflow-y: scroll;
+}
+.text-bg-comercio{
+	background-color:rgba(200, 105, 15, 0.664);
+}
+.text-bg-aviso{
+	background-color:rgba(82, 121, 200, 0.2);
+}
+.card-busqueda{
+	height:40px; 
+	overflow: scroll;
+}
+#mapComercios{
+	height: 600px;
+}
+#cuerpoAvisos, #cuerpoComercios{
+	max-height: 600px;
+	overflow: scroll;
+}
+#tituloBuscador{
+	margin-left: 10px;
+	color: #000;
+}
+#vacio h1{
+	font-size: 45px;
 }

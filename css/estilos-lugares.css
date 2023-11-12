@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+	padding-top: 60px;
+    scroll-padding-top: 60px;
+}
+
+header {
+    background-color: white;
+}
+
+main {
+    background-color: whitesmoke;
+}
+
+.col-sm {
+    font-size: 20px;
+}
+
+.img-lugar {
+    margin: auto;
+    padding: 10px;
+}
+
+.img-atractivo {
+    padding: 5px;
+}
+
+.row {
+    font-size: 20px;
+}
+
+.row-main {
+    background-color: lightblue;
+    font-weight: bold;
+}

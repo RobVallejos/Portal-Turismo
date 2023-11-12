@@ -281,63 +281,13 @@ let comercios = {
 
 
 
-//////////////////////////////////MAPA//////////////////////////////
-
-
-
-var map = L.map('map').setView([-32.346975285600216, -65.00391276013097], 14);
-
-
-
-
-var comercioIcon = L.icon({
-   iconUrl: 'img/comercioIcono.png',
-   iconSize: [38, 45],
-   iconAnchor: [22, 30],
-   popupAnchor: [-3, -10]
-});
-
-
-//llena el mapa con los comercios que corresponden a la busqueda
-function llenarMapa(comerciosACompletar) {
-
-   //console.log(comerciosACompletar);
-
-   contenedorDeComercios.innerHTML = "";
-   añadirComerciosAlDOM(comerciosACompletar);
-
-
-   // Elimina todos los markers existentes en el mapa
-   map.eachLayer((layer) => {
-      if (layer instanceof L.Marker) {
-         map.removeLayer(layer);
-      }
-   });
-   // creo los nuevos markers
-   comerciosACompletar.forEach((comercio) => {
-      L.marker(comercio.coordenadas, { icon: comercioIcon }).addTo(map).bindPopup("<b>" + comercio.nombre + "</b><br>" + comercio.direccion + "</b><br>Horario: " + comercio.horario);
-   });
-}
-
-
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-   maxZoom: 20,
-   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-
-
-
 /////////////////////////////////////////////////////Logica//////////////////////////////////////////////
 
-
-
-
-
-const contenerDeProcutos = document.getElementById('cuerpoAvisos');
-const contenedorDeComercios = document.getElementById('cuerpoComercios');
-var filtroArticuloRegionalIsChecked = true;
-var filtroServicioIsChecked = true;
-var filtroOtrosIsChecked = true;
+const contenedorProductos = $("#cuerpoAvisos .row"); //document.getElementById('cuerpoAvisos');
+const contenedorDeComercios = $("#cuerpoComercios .row"); //document.getElementById('cuerpoComercios');
+var filtroArticuloRegionalIsChecked = false;
+var filtroServicioIsChecked = false;
+var filtroOtrosIsChecked = false;
 
 
 // actualiza en las variables de JS segun el estado del check "Articulo Regional"
@@ -385,12 +335,15 @@ let comercio = comercios.comercios
 
 
 const buscador = document.getElementById("buscador");
-const inputBusqueda = document.getElementById("inputBusqueda");
+let inputBusqueda = document.getElementById("inputBusqueda");
+let contenedorAvisos = $("#contenedorAvisos");
+let contenedorComercios = $("#contenedorComercios");
+let contenedorMapaComercios = $("#contenedorMapaComercios");
 
 // Toma el Input del Buscador del front, y filtra los avisos con ese nombre
 buscador.addEventListener("click", function () {
 
-   contenerDeProcutos.innerHTML = "";
+   contenedorProductos.html(""); //contenedorProductos.html("");;
    var produc = [];
    var comercios = [];
    var valor = inputBusqueda.value;
@@ -414,8 +367,10 @@ buscador.addEventListener("click", function () {
    llenarMapa(comercios)
    añadirAvisosAlDOM(produc);
 
-
-
+   contenedorAvisos.removeAttr("hidden");
+   contenedorComercios.removeAttr("hidden");
+   contenedorMapaComercios.css("opacity", 1);
+   $("#vacio")[0].scrollIntoView();
 })
 
 ///////////////////////////////////////////
@@ -519,7 +474,7 @@ const verTodosLosAvisos = document.getElementById("ver-todo");
 // muestra todos los avisos con el boton "Ver todos los productos"
 verTodosLosAvisos.addEventListener('click', function () {
 
-   contenerDeProcutos.innerHTML = "";
+   contenedorProductos.html("");;
    var comerciosParaElmapa = [];
 
    comercio.forEach((comercio) => {
@@ -533,7 +488,7 @@ verTodosLosAvisos.addEventListener('click', function () {
 
 // Filtra los avisos segun los check
 function mostrarAvisosFiltrados() {
-   contenerDeProcutos.innerHTML = "";
+   contenedorProductos.html("");;
    filtrarAvisos();
 }
 
@@ -541,9 +496,8 @@ botonActualizar.addEventListener('click', mostrarAvisosFiltrados)
 
 // Crea en el HTML la lista con los avisos a mostrar, segun el listado de comercios que le brinden
 
+/*
 function añadirAvisosAlDOM(avisos) {
-
-
    avisos.forEach((aviso) => {
 
       const div = document.createElement(`div`)
@@ -565,17 +519,31 @@ function añadirAvisosAlDOM(avisos) {
                  </div>
                </div>
              </div>`
-
-      contenerDeProcutos.append(div);
-
+      contenedorProductos.append(div);
    })
+}
+*/ 
 
+function añadirAvisosAlDOM(avisos) {
+   avisos.forEach((aviso) => {
+      let contenido = "";
+      const div = document.createElement('div')
+      div.classList.add('text-center', 'col-6');
 
+      contenido += ` <div class='card mb-3' style='height: 320px;'>
+				         <div class='card-header text-bg-aviso card-busqueda'><h6>${aviso.nombre}</h6></div>
+				         <div class='card-body'>
+					      <img src='${aviso.img1}' style='width: 100px; height: 100px;' class='img-fluid rounded-start' alt=''>`
+		if(aviso.precio != "") 
+         contenido += `<h6 class='card-text mt-2'>${aviso.precio}</h6>`;
+      contenido += ` <p class='card-text'>${aviso.detalle}</p>
+                     <p class='card-text'>${aviso.infoAdicional}</p></div></div>`;
+      div.innerHTML = contenido;
+      contenedorProductos.append(div);
+   });
 }
 
-
-
-
+/*
 // Crea en el HTML la lista con comercios a mostrar, segun el listado de comercios que le brinden
 function añadirComerciosAlDOM(comercios) {
    comercios.forEach((comercio) => {
@@ -607,4 +575,65 @@ function añadirComerciosAlDOM(comercios) {
 
    })
 }
+*/
+
+function añadirComerciosAlDOM(comercios) {
+   comercios.forEach((comercio) => {
+      const div = document.createElement('div')
+      div.classList.add('text-center');
+
+      div.innerHTML = ` <div class='card mb-3' style='height: 320px;'>
+				         <div class='card-header text-bg-comercio card-busqueda'><h6>${comercio.nombre}</h6></div>
+				         <div class='card-body'>
+					      <img src='${comercio.img1}' style='width: 150px; height: 100px;' class='img-fluid rounded-start' alt=''>
+                     <p class="card-text mt-2">${comercio.detalle}</p>
+                     <p class="card-text"><b>Dirección: </b>${comercio.direccion}</p>
+                     <p class="card-text"><b>Teléfono: </b>${comercio.telefono}</p>`;
+       contenedorDeComercios.append(div);
+   });
+
+   actualizarMapHeight();
+}
+
+function actualizarMapHeight(){
+   let map = $("#mapComercios");
+   map.css("height", contenedorComercios.offsetHeight)
+}
+
+
+//////////////////////////////////MAPA//////////////////////////////
+var map = L.map('mapComercios').setView([-32.33847916071844, -65.01406774630965], 14);
+
+var comercioIcon = L.icon({
+   iconUrl: 'img/comercioIcono.png',
+   iconSize: [38, 45],
+   iconAnchor: [22, 30],
+   popupAnchor: [-3, -10]
+});
+
+//llena el mapa con los comercios que corresponden a la busqueda
+function llenarMapa(comerciosACompletar) {
+
+   //console.log(comerciosACompletar);
+
+   contenedorDeComercios.html("");
+   añadirComerciosAlDOM(comerciosACompletar);
+
+
+   // Elimina todos los markers existentes en el mapa
+   map.eachLayer((layer) => {
+      if (layer instanceof L.Marker) {
+         map.removeLayer(layer);
+      }
+   });
+   // creo los nuevos markers
+   comerciosACompletar.forEach((comercio) => {
+      L.marker(comercio.coordenadas, { icon: comercioIcon }).addTo(map).bindPopup("<b>" + comercio.nombre + "</b><br>" + comercio.direccion + "</b><br>Horario: " + comercio.horario);
+   });
+}
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+   maxZoom: 17,
+   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
 
