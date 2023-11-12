@@ -16,6 +16,13 @@ let eventos = {
             lugar: "Parque",
             fecha: "21/11/23",
             estado: "Vigente"
+        },
+        {
+            id: "o3",
+            informacion: "Bienvenido al Espectáculo Ambulante del Parque, una mezcla encantadora de creatividad y entretenimiento que cobra vida en cada rincón de la diversión. Disfrute malabaristas expertos lanzando sus malabares al aire, creando arcos de colores que capturan la atención de los espectadores, mimos hábiles que interactuan con la audiencia, llevando risas y sonrisas a quienes se cruzan en su camino, y a acróbatas intrépidos desafíando la gravedad en altos zancos, llevando su arte a nuevas alturas. El Espectáculo Ambulante del Parque no es solo una exhibición de habilidades, es una experiencia participativa que invita a los visitantes a sumergirse en la magia del momento. ",
+            lugar: "Parque de diversiones Maravillandia",
+            fecha: "10/11/23",
+            estado: "No vigente"
         }
     ],
     cines: [
