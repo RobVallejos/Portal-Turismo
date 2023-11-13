@@ -9,8 +9,9 @@ let comercios = {
          telefono: "1123457895",
          img1: "https://lh5.googleusercontent.com/p/AF1QipNdNKZnYfWNwHBPT3QsoBArPdYtqYHdImxNsQAk=w408-h307-k-no",
          articuloRegional: true,
-         servicio: true,
-         otros: false,
+         servicio: false,
+         otros: true,
+         categorias: ["Lacteos", "Perfumes"],
          avisos: [
             {
                nombre: "Leche",
@@ -18,11 +19,10 @@ let comercios = {
                img1: "https://previews.123rf.com/images/yuwnis07/yuwnis072211/yuwnis07221100038/194959154-leche-de-caricatura-animada-plana-en-ilustraci%C3%B3n-de-caja-de-papel-grande-bebidas-ricas-en-calcio.jpg",
                img2: "https://us.123rf.com/450wm/kahovsky/kahovsky2008/kahovsky200800097/154187168-linda-leche-divertida-feliz-icono-de-ilustraci%C3%B3n-de-personaje-kawaii-de-dibujos-animados-de-l%C3%ADnea.jpg?ver=6",
                img3: "https://dibujos-paracolorear.de/wp-content/uploads/2020/05/imagenes-leches.png",
-               articuloRegional: true,
+               articuloRegional: false,
                servicio: false,
-               otros: false,
-               servicio: false,
-               producto: true,
+               otros: true,
+               categoria:"Lacteos",
                // hace referencia a Restricciones (servicio) o caracteristicas (producto)
                infoAdicional: "Leche 1L",
                precio: "sin precio asignado",
@@ -30,16 +30,15 @@ let comercios = {
 
             },
             {
-               nombre: "Leche",
+               nombre: "Leche de cabra",
                detalle: "Leche VI",
-               img1: "https://us.123rf.com/450wm/kahovsky/kahovsky2008/kahovsky200800097/154187168-linda-leche-divertida-feliz-icono-de-ilustraci%C3%B3n-de-personaje-kawaii-de-dibujos-animados-de-l%C3%ADnea.jpg?ver=6",
-               img2: "https://previews.123rf.com/images/yuwnis07/yuwnis072211/yuwnis07221100038/194959154-leche-de-caricatura-animada-plana-en-ilustraci%C3%B3n-de-caja-de-papel-grande-bebidas-ricas-en-calcio.jpg",
-               img3: "https://dibujos-paracolorear.de/wp-content/uploads/2020/05/imagenes-leches.png",
-               articuloRegional: true,
+               img1: "https://s28461.pcdn.co/wp-content/uploads/2011/09/La-leche-de-cabra-una-nueva-opcio%CC%81n-en-tu-mesa.jpg",
+               img2: "https://zoovetesmipasion.com/wp-content/uploads/2018/05/leche-de-cabra-2.jpg",
+               img3: "https://img.europapress.es/fotoweb/fotonoticia_20160618075935_1200.jpg",
+               articuloRegional: false,
                servicio: false,
-               otros: false,
-               servicio: false,
-               producto: true,
+               otros: true,
+               categoria:"Lacteos",
                // hace referencia a Restricciones (servicio) o caracteristicas (producto)
                infoAdicional: "Leche 1L",
                precio: "$1.200",
@@ -53,10 +52,9 @@ let comercios = {
                img2: "https://d3ugyf2ht6aenh.cloudfront.net/stores/001/188/259/products/ch-bad-boy-11-c2c362bcd4534b831716225029380496-240-0.jpg",
                img3: "https://f.fcdn.app/imgs/3a9323/electroventas.com.uy/elecuy/0528/original/catalogo/VIE65189703VIE651897032/1500-1500/set-perfume-carolina-herrera-bad-boy-edt-50ml-shower-gel-original-set-perfume-carolina-herrera-bad-boy-edt-50ml-shower-gel-original.jpg",
                articuloRegional: false,
-               servicio: true,
-               otros: false,
                servicio: false,
-               producto: true,
+               otros: true,
+               categoria:"Perfumes",
                // hace referencia a Restricciones (servicio) o caracteristicas (producto)
                infoAdicional: "50ml",
                precio: "$100.000",
@@ -73,9 +71,10 @@ let comercios = {
          horario: "Lunes a Domingo de 8 a 14",
          telefono: "1123457895",
          img1: "https://cloudfront-us-east-1.images.arcpublishing.com/radiomitre/WOSQKJ7TP5ERZH4RP3LP6UZ5KE.jpg",
-         articuloRegional: false,
+         articuloRegional: true,
          servicio: false,
          otros: true,
+         categorias: ["carne"],
          avisos: [
             {
                nombre: "asado",
@@ -86,11 +85,26 @@ let comercios = {
                articuloRegional: false,
                servicio: false,
                otros: true,
-               servicio: false,
-               producto: true,
+               categoria:"carne",
                // hace referencia a Restricciones (servicio) o caracteristicas (producto)
                infoAdicional: "5kg de asado",
                precio: "$5.000",
+               estado: "vigente",
+
+            },
+            {
+               nombre: "Cabrito entero",
+               detalle: "Cabrito entero de 20kg ",
+               img1: "https://asadocriolloargentino.com/wp-content/uploads/2021/03/como-hacer-chivito-o-cabrito-a-la-parrilla.jpg",
+               img2: "https://okdiario.com/img/2018/08/17/cabrito-asado-655x368.jpg",
+               img3: "https://www.divinacocina.es/wp-content/uploads/2014/10/cabrito-asado-en-una-bandeja.jpg",
+               articuloRegional: true,
+               servicio: false,
+               otros: false,
+               categoria:"carne",
+               // hace referencia a Restricciones (servicio) o caracteristicas (producto)
+               infoAdicional: "25kg de asado",
+               precio: "$55.000",
                estado: "vigente",
 
             }
@@ -105,8 +119,9 @@ let comercios = {
          telefono: "1123457895",
          img1: "https://lh5.googleusercontent.com/p/AF1QipPpOnWSevt10RrzsxVb_-jwHntngjofHeZeN2kT=w408-h544-k-no",
          articuloRegional: false,
-         servicio: false,
-         otros: true,
+         servicio: true,
+         otros: false,
+         categorias: ["Excurciones"],
          avisos: [
             {
                nombre: "Salto de la cascada",
@@ -115,10 +130,9 @@ let comercios = {
                img2: "https://i.pinimg.com/originals/a6/2d/c5/a62dc52302f90004794b7bd5670930b1.jpg",
                img3: "https://www.elsoldeparral.com.mx/incoming/n20v3n-cascada-foto-mariano-rubio2.jpg/ALTERNATES/LANDSCAPE_1140/CASCADA%20FOTO%20MARIANO%20RUBIO2.jpg",
                articuloRegional: false,
-               servicio: false,
-               otros: true,
                servicio: true,
-               producto: false,
+               otros: false,
+               categorias: "Excurciones",
                // hace referencia a Restricciones (servicio) o caracteristicas (producto)
                infoAdicional: "Apto para mayores de 12 años",
                precio: "$5.000",
@@ -132,10 +146,9 @@ let comercios = {
                img2: "https://media-cdn.tripadvisor.com/media/photo-s/0f/8c/0e/9d/salto-em-dupla.jpg",
                img3: "https://previews.123rf.com/images/rh2010/rh20101507/rh2010150700305/43573748-mujer-joven-en-el-usar-ocasional-con-paseos-casco-rojo-en-una-tirolesa-en-las-monta%C3%B1as-especie.jpg",
                articuloRegional: false,
-               servicio: false,
-               otros: true,
                servicio: true,
-               producto: false,
+               otros: false,
+               categorias: "Excurciones",
                // hace referencia a Restricciones (servicio) o caracteristicas (producto)
                infoAdicional: "Apto para mayores de 12 años",
                precio: "$7.000",
@@ -156,6 +169,7 @@ let comercios = {
          articuloRegional: false,
          servicio: false,
          otros: true,
+         categorias: ["Panaderia" , "Desayunos" ,"torta"],
          avisos: [
             {
                nombre: "Pan",
@@ -166,8 +180,7 @@ let comercios = {
                articuloRegional: false,
                servicio: false,
                otros: true,
-               servicio: false,
-               producto: true,
+               categorias: "Panaderia",
                // hace referencia a Restricciones (servicio) o caracteristicas (producto)
                infoAdicional: "Pan Frances",
                precio: "$1.100",
@@ -181,10 +194,9 @@ let comercios = {
                img2: "https://cocina-casera.com/wp-content/uploads/2018/04/desayuno-ingl%C3%A9s-2.jpg",
                img3: "https://thumbs.dreamstime.com/z/desayuno-en-cama-con-te-quiero-el-texto-una-nota-la-taza-de-caf%C3%A9-jugo-macarrones-subi%C3%B3-flor-bandeja-madera-rom%C3%A1ntico-133817600.jpg",
                articuloRegional: false,
-               servicio: false,
-               otros: true,
                servicio: true,
-               producto: false,
+               otros: false,
+               categorias: "Desayunos",
                // hace referencia a Restricciones (servicio) o caracteristicas (producto)
                infoAdicional: "Servicio a domicilio",
                precio: "$3.500",
@@ -200,11 +212,73 @@ let comercios = {
                articuloRegional: false,
                servicio: false,
                otros: true,
-               servicio: false,
-               producto: true,
+               categorias: "torta",
                // hace referencia a Restricciones (servicio) o caracteristicas (producto)
                infoAdicional: "Torta a eleccion",
                precio: "$2.500",
+               estado: "vigente",
+
+            }
+         ]
+      },
+      {
+         nombre: "Artesanias Villa Altube",
+         detalle: "Tallados a mano , tejidos y cerámica artesanal",
+         direccion: "Juan de Videla 3, D5881 Merlo, San Luis",
+         coordenadas: [-32.34254087719986, -65.01346809529832],
+         horario: "Lunes a Domingo de 8 a 14",
+         telefono: "1123457895",
+         img1: "https://lh5.googleusercontent.com/p/AF1QipMbBgCPjrTq2OCSkXvXyLlL0xm5c9k9MJYCE3Yd=w408-h726-k-no",
+         articuloRegional: true,
+         servicio: false,
+         otros: false,
+         categorias: ["Mate" , "Tejidos"],
+         avisos: [
+            {
+               nombre: "Mate de algarrobo",
+               detalle: "Mate de algarrobo artesanal",
+               img1: "https://hechoenmerlo.com.ar/wp-content/uploads/2021/06/199315759_5583030228434558_9181447434349861657_n.jpg",
+               img2: "https://hechoenmerlo.com.ar/wp-content/uploads/2021/06/199400072_5583029935101254_1007890061415862022_n.jpg",
+               img3: "https://hechoenmerlo.com.ar/wp-content/uploads/2021/06/Ernestina-Cornejo.jpg",
+               articuloRegional: true,
+               servicio: false,
+               otros: false,
+               categorias: "Mate",
+               // hace referencia a Restricciones (servicio) o caracteristicas (producto)
+               infoAdicional: "Mate Artesanal",
+               precio: "$3.100",
+               estado: "vigente",
+
+            },
+            {
+               nombre: "Delivery Desayuno para 2 Personas",
+               detalle: "1kg de pan, 1 torta de ricota y 2 jugos exprimidos",
+               img1: "https://fanbag.com.ar/imagenes/thumb/78/17578_tentacionesacasa-600x460_95_600x460_f.jpg",
+               img2: "https://cocina-casera.com/wp-content/uploads/2018/04/desayuno-ingl%C3%A9s-2.jpg",
+               img3: "https://thumbs.dreamstime.com/z/desayuno-en-cama-con-te-quiero-el-texto-una-nota-la-taza-de-caf%C3%A9-jugo-macarrones-subi%C3%B3-flor-bandeja-madera-rom%C3%A1ntico-133817600.jpg",
+               articuloRegional: false,
+               servicio: true,
+               otros: false,
+               categorias: "Desayunos",
+               // hace referencia a Restricciones (servicio) o caracteristicas (producto)
+               infoAdicional: "Servicio a domicilio",
+               precio: "$3.500",
+               estado: "vigente",
+
+            },
+            {
+               nombre: "Poncho Regional",
+               detalle: "Poncho Regional unisex",
+               img1: "https://www.mendoza.gov.ar/wp-content/uploads/sites/49/2019/10/DOLCE-LUC%C3%8DA-17.jpg",
+               img2: "https://i.ytimg.com/vi/U9yd38hXago/maxresdefault.jpg",
+               img3: "https://www.lanacion.com.ar/resizer/v2/torta-HB4RI5VI3ZHRNPIEZGN3MM3LME.png?auth=0b0329a1dc91105d6e45458a9fff828231da8018489bd4d922f4e117e68fd567&width=420&height=280&quality=70&smart=true",
+               articuloRegional: true,
+               servicio: false,
+               otros: false,
+               categorias: "Tejidos",
+               // hace referencia a Restricciones (servicio) o caracteristicas (producto)
+               infoAdicional: "Tejido unisex tipo poncho",
+               precio: "$4.500",
                estado: "vigente",
 
             }
@@ -219,9 +293,10 @@ let comercios = {
          horario: "Lunes a Domingo de 8 a 21hrs",
          telefono: "1123457895",
          img1: "https://lh5.googleusercontent.com/p/AF1QipPruF1V1pFNLPi_9zwKyMPzPcSBCtapO4FzEQD3=w408-h725-k-no",
-         articuloRegional: false,
+         articuloRegional: true,
          servicio: false,
          otros: true,
+         categorias: ["Chocolateria" , "Perfume" ,"Aljafores","Mate"],
          avisos: [
             {
                nombre: "Chocolates Reginales",
@@ -229,11 +304,10 @@ let comercios = {
                img1: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQa7fxhMHzL9bdAWGAmon-nsQ92EGC7UTBmRsU0Uqe28NDhNndXwqKc6qHBtkqGlp0ezi4&usqp=CAU",
                img2: "https://1.bp.blogspot.com/_j5Jgz8c3qv4/TKDlUhJehEI/AAAAAAAAAHI/G3FRpx_Y9SY/s1600/chocococococ.jpg",
                img3: "https://c8.alamy.com/compes/eekk85/chocolate-artesanal-con-algunos-de-los-ingredientes-que-se-utilizan-en-estos-chocolates-eekk85.jpg",
-               articuloRegional: false,
+               articuloRegional: true,
                servicio: false,
-               otros: true,
-               servicio: false,
-               producto: true,
+               otros: false,
+               categorias: "Chocolateria",
                // hace referencia a Restricciones (servicio) o caracteristicas (producto)
                infoAdicional: "Chocolate",
                precio: "$11.100",
@@ -246,11 +320,10 @@ let comercios = {
                img1: "https://thisisyung.com/wp-content/uploads/2023/09/rs-OJAR_EDP_100ml_3.jpg.webp",
                img2: "https://diariolaopinion.com.ar/download/multimedia.normal.ab831a1fafe5d9a4.50657266756d65735f6e6f726d616c2e77656270.webp",
                img3: "https://www.inbodas.com/wp-content/uploads/2022/04/blog-bodas-perfumes-11.jpg",
-               articuloRegional: false,
-               servicio: true,
-               otros: false,
+               articuloRegional: true,
                servicio: false,
-               producto: true,
+               otros: false,
+               categorias: "Perfume",
                // hace referencia a Restricciones (servicio) o caracteristicas (producto)
                infoAdicional: "Perfume Regional 40ml",
                precio: "$30.500",
@@ -263,17 +336,46 @@ let comercios = {
                img1: "https://almacenfamily.com/productos/7798136470011-3332-6019c540d52be.jpg",
                img2: "https://dulceres.com.ar/wp-content/uploads/2020/02/DSC0019-scaled-e1581172576923-1024x493.jpg",
                img3: "https://blog.winesofargentina.com/wp-content/uploads/2022/04/alfajores-argentinos-Image-2022-04-06-at-1.07.07-PM-1.jpeg-1024x691.jpg",
-               articuloRegional: false,
+               articuloRegional: true,
                servicio: false,
-               otros: true,
-               servicio: false,
-               producto: true,
+               otros: false,
+               categorias: "Aljafores",
                // hace referencia a Restricciones (servicio) o caracteristicas (producto)
                infoAdicional: "Torta a eleccion",
                precio: "$2.500",
                estado: "vigente",
 
-            }
+            },
+            {
+               nombre: "Mate de Merlo",
+               detalle: "Mate de 500gr",
+               img1: "https://agenciasanluis.com/wp-content/uploads/2022/01/mate_puntano.jpg",
+               img2: "https://visitarsanluis.com/storage/app/uploads/public/61e/cbb/ea6/thumb_5093_1024_600_0_0_crop.webp",
+               img3: "https://culturasanluis.com/wp-content/uploads/2022/11/MATE-1.jpeg",
+               articuloRegional: true,
+               servicio: false,
+               otros: false,
+               categorias: "Mate",
+               // hace referencia a Restricciones (servicio) o caracteristicas (producto)
+               infoAdicional: "Mate de recuerdo de Merlo",
+               precio: "$2.500",
+               estado: "vigente",
+            },
+            {
+               nombre: "Mate de Merlo Premium",
+               detalle: "Mate de 500gr",
+               img1: "https://culturasanluis.com/wp-content/uploads/2022/11/MATE-1.jpeg",
+               img2: "https://visitarsanluis.com/storage/app/uploads/public/61e/cbb/ea6/thumb_5093_1024_600_0_0_crop.webp",
+               img3: "https://culturasanluis.com/wp-content/uploads/2022/11/MATE-1.jpeg",
+               articuloRegional: true,
+               servicio: false,
+               otros: false,
+               categorias: "Mate",
+               // hace referencia a Restricciones (servicio) o caracteristicas (producto)
+               infoAdicional: "Mate de recuerdo de Merlo Premium",
+               precio: "$4.500",
+               estado: "vigente",
+            },
          ]
       }
    ]
