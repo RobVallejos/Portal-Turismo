@@ -3,9 +3,9 @@
     display: grid;
     grid-template-columns: 40% 40% 20%;
     grid-template-areas: 
-    "filtro filtro filtro"
+    "filtro filtro cotizaciones"
     "contenido contenido_comercios map"
-    "contenido contenido_comercios cotizaciones";
+    "contenido contenido_comercios map";
 }
 
 #filtro{
@@ -14,6 +14,10 @@
 
 #map{
     grid-area: map;
+    height: 400px;
+    width: 400px;
+    margin: 10%;
+
 }
 
 #cotizaciones{
