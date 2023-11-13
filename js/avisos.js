@@ -35,9 +35,9 @@ let comercios = {
                img1: "https://s28461.pcdn.co/wp-content/uploads/2011/09/La-leche-de-cabra-una-nueva-opcio%CC%81n-en-tu-mesa.jpg",
                img2: "https://zoovetesmipasion.com/wp-content/uploads/2018/05/leche-de-cabra-2.jpg",
                img3: "https://img.europapress.es/fotoweb/fotonoticia_20160618075935_1200.jpg",
-               articuloRegional: false,
+               articuloRegional: true,
                servicio: false,
-               otros: true,
+               otros: false,
                categoria:"Lacteos",
                // hace referencia a Restricciones (servicio) o caracteristicas (producto)
                infoAdicional: "Leche 1L",
@@ -251,27 +251,11 @@ let comercios = {
 
             },
             {
-               nombre: "Delivery Desayuno para 2 Personas",
-               detalle: "1kg de pan, 1 torta de ricota y 2 jugos exprimidos",
-               img1: "https://fanbag.com.ar/imagenes/thumb/78/17578_tentacionesacasa-600x460_95_600x460_f.jpg",
-               img2: "https://cocina-casera.com/wp-content/uploads/2018/04/desayuno-ingl%C3%A9s-2.jpg",
-               img3: "https://thumbs.dreamstime.com/z/desayuno-en-cama-con-te-quiero-el-texto-una-nota-la-taza-de-caf%C3%A9-jugo-macarrones-subi%C3%B3-flor-bandeja-madera-rom%C3%A1ntico-133817600.jpg",
-               articuloRegional: false,
-               servicio: true,
-               otros: false,
-               categorias: "Desayunos",
-               // hace referencia a Restricciones (servicio) o caracteristicas (producto)
-               infoAdicional: "Servicio a domicilio",
-               precio: "$3.500",
-               estado: "vigente",
-
-            },
-            {
                nombre: "Poncho Regional",
                detalle: "Poncho Regional unisex",
-               img1: "https://www.mendoza.gov.ar/wp-content/uploads/sites/49/2019/10/DOLCE-LUC%C3%8DA-17.jpg",
-               img2: "https://i.ytimg.com/vi/U9yd38hXago/maxresdefault.jpg",
-               img3: "https://www.lanacion.com.ar/resizer/v2/torta-HB4RI5VI3ZHRNPIEZGN3MM3LME.png?auth=0b0329a1dc91105d6e45458a9fff828231da8018489bd4d922f4e117e68fd567&width=420&height=280&quality=70&smart=true",
+               img1: "https://lasvinas.com.ar/wp-content/uploads/2021/05/20210504_132923_clipped_rev_1.jpeg",
+               img2: "https://acdn.mitiendanube.com/stores/545/007/products/la-emilia-regionales-ponchos-de-colores-11-ce559f0901f09ceead15536132237239-1024-1024.jpg",
+               img3: "https://tejidoscalamaco.com.ar/wp-content/uploads/2022/04/DSC_0884.jpg",
                articuloRegional: true,
                servicio: false,
                otros: false,
@@ -437,9 +421,9 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 const contenerDeProcutos = document.getElementById('cuerpoAvisos');
 const contenedorDeComercios = document.getElementById('cuerpoComercios');
-var filtroArticuloRegionalIsChecked = true;
-var filtroServicioIsChecked = true;
-var filtroOtrosIsChecked = true;
+var filtroArticuloRegionalIsChecked = false;
+var filtroServicioIsChecked = false;
+var filtroOtrosIsChecked = false;
 
 
 // actualiza en las variables de JS segun el estado del check "Articulo Regional"
@@ -533,16 +517,16 @@ function filtrarAvisos() {
 
    comercio.forEach((comercios) => {
 
-      console.log(comercios)
-      cont = cont + 1;
 
-      console.log(cont)
 
 
       comercios.avisos.forEach((aviso) => {
+         console.log(aviso)
+
 
          switch (true) {
             case filtroArticuloRegionalIsChecked && filtroServicioIsChecked && filtroOtrosIsChecked:
+               console.log("asd")
                if (aviso.articuloRegional || aviso.servicio || aviso.otros) {
                   produc.push(aviso);
                   if (!comerciosParaElmapa.includes(comercios)) {
@@ -643,7 +627,7 @@ botonActualizar.addEventListener('click', mostrarAvisosFiltrados)
 
 // Crea en el HTML la lista con los avisos a mostrar, segun el listado de comercios que le brinden
 
-/*function añadirAvisosAlDOM(avisos) {
+function añadirAvisosAlDOM(avisos) {
 
 
    avisos.forEach((aviso) => {
@@ -673,8 +657,8 @@ botonActualizar.addEventListener('click', mostrarAvisosFiltrados)
    })
 
 
-}*/
-
+}
+/*
 function añadirAvisosAlDOM(avisos) {
    avisos.forEach((aviso) => {
       let contenido = "";
@@ -693,10 +677,10 @@ function añadirAvisosAlDOM(avisos) {
       contenerDeProcutos.append(div);
    });
 }
-
+*/
 
 // Crea en el HTML la lista con comercios a mostrar, segun el listado de comercios que le brinden
-/*function añadirComerciosAlDOM(comercios) {
+function añadirComerciosAlDOM(comercios) {
    comercios.forEach((comercio) => {
 
       const div = document.createElement(`div`)
@@ -725,8 +709,8 @@ function añadirAvisosAlDOM(avisos) {
       contenedorDeComercios.append(div);
 
    })
-}*/
-
+}
+/*
 function añadirComerciosAlDOM(comercios) {
    comercios.forEach((comercio) => {
       const div = document.createElement('div')
@@ -743,7 +727,7 @@ function añadirComerciosAlDOM(comercios) {
    });
 
    //actualizarMapHeight();
-}
+}*/
 
 // Obtener la referencia al contenedor de monedas y al campo de fecha actualizado
 var monedasContainer = document.getElementById('monedasContainer');
