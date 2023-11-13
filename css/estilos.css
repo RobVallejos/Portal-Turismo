@@ -61,7 +61,9 @@ section{
 #mapAsistencia{
 	height: 300px;
 }
-
+#map{
+	height: 350px;
+}
 
 .img-circular{
 	border-radius: 50%;
