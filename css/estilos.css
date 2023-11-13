@@ -136,11 +136,6 @@ footer a{
 a{
 	text-decoration: none;
 }
-#cotizaciones{
-	height: 220px;
-	margin-bottom: 20px;
-	overflow-y: scroll;
-}
 .text-bg-comercio{
 	background-color:rgba(200, 105, 15, 0.664);
 }
@@ -149,19 +144,5 @@ a{
 }
 .card-busqueda{
 	height:40px; 
-	overflow: scroll;
 }
-#mapComercios{
-	height: 600px;
-}
-#cuerpoAvisos, #cuerpoComercios{
-	max-height: 600px;
-	overflow: scroll;
-}
-#tituloBuscador{
-	margin-left: 10px;
-	color: #000;
-}
-#vacio h1{
-	font-size: 45px;
-}
+
