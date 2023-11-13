@@ -744,3 +744,32 @@ function añadirComerciosAlDOM(comercios) {
 
    //actualizarMapHeight();
 }
+
+// Obtener la referencia al contenedor de monedas y al campo de fecha actualizado
+var monedasContainer = document.getElementById('monedasContainer');
+var actualizadoCampo = document.getElementById('actualizado');
+
+// Hacer una solicitud a la API
+fetch('https://www.dolarsi.com/api/api.php?type=dolar')
+  .then(response => response.json())
+  .then(data => {
+    // Crear una CArd
+    var cardHTML =
+      '<h5 class="card-title">Tipos de Cambio</h5>';
+
+    // Agrega las monedas a la CARD
+    data.forEach(function (moneda) {
+      cardHTML +=
+        '<p class="card-text"><strong>' + moneda.casa.nombre + '</strong> - Compra: ' + moneda.casa.compra + ' | Venta: ' + moneda.casa.venta + '</p>';
+    });
+
+    // Obtener la fecha y hora actual
+    var fechaActual = new Date();
+    // Formatear la fecha y hora en una cadena legible
+    var fechaFormateada = fechaActual.toLocaleString('es-ES');
+
+    // Actualizar la tarjeta con la información y la fecha actualizada
+    monedasContainer.innerHTML = cardHTML;
+    actualizadoCampo.innerHTML = 'Actualizado a: ' + fechaFormateada;
+  })
+  .catch(error => console.error('Error al obtener datos de la API:', error));
