@@ -672,7 +672,8 @@ function añadirAvisosAlDOM(avisos) {
 		if(aviso.precio != "") 
          contenido += `<h6 class='card-text mt-2'>${aviso.precio}</h6>`;
       contenido += ` <p class='card-text'>${aviso.detalle}</p>
-                     <p class='card-text'>${aviso.infoAdicional}</p></div></div>`;
+                     <p class='card-text'>${aviso.infoAdicional}</p>
+                     <p class='card-text'><b>Categoría: </b>${aviso.categoria}</p></div></div>`;
       div.innerHTML = contenido;
       contenerDeProcutos.append(div);
    });
@@ -722,7 +723,8 @@ function añadirComerciosAlDOM(comercios) {
 					      <img src='${comercio.img1}' style='width: 150px; height: 100px;' class='img-fluid rounded-start' alt=''>
                      <p class="card-text mt-2">${comercio.detalle}</p>
                      <p class="card-text"><b>Dirección: </b>${comercio.direccion}</p>
-                     <p class="card-text"><b>Teléfono: </b>${comercio.telefono}</p>`;
+                     <p class="card-text"><b>Teléfono: </b>${comercio.telefono}</p>
+                     <p class="card-text"><b>Categorías: </b>${comercio.categorias.toString()}</p>`;
        contenedorDeComercios.append(div);
    });
 
