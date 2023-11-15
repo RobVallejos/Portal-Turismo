@@ -27,7 +27,7 @@
     <!-- Nav -->
     <nav class="navbar navbar-expand-sm sticky-top own-nav" id="main-nav">
         <div class="container-fluid">
-          <ul class="nav justify-content-end">
+          <ul class="nav justify-content-end offset-md-1">
             <li class="nav-item">
                 <a class="nav-link text-link" href="index.html">Inicio</a>
               </li>
@@ -44,6 +44,9 @@
             <li class="nav-item">
               <a class="nav-link text-link" href="creador_avisos.html">Soy comerciante</a>
             </li>
+			<li class="nav-item">
+				<span id="auspiciante">Secretaría de Turismo</span>
+			</li>
           </ul>
         </div>
       </nav>
@@ -51,37 +54,45 @@
 	<!-- Carousel + titulo -->
 	<div class="container-fluid position-relative no-padding main-container">
 		<div class="container-fluid z-3 position-absolute overlay">
-			<h1>Valle del Inca</h1>
-			<h3 class="h3_new">Secretaría de Turismo</h3>
+			<div class="text-center" id="nombreCiudad">
+				<h1>Valle del Inca</h1>
+				<div class="waviy">
+					<span style="--i:1">B</span>
+					<span style="--i:2">i</span>
+					<span style="--i:3">e</span>
+					<span style="--i:4">n</span>
+					<span style="--i:5">v</span>
+					<span style="--i:6">e</span>
+					<span style="--i:7">n</span>
+					<span style="--i:8">i</span>
+					<span style="--i:9">d</span>
+					<span style="--i:10">o</span>
+				</div>				
+			</div>
+			
+			
 		</div>
 
 		<!-- Carousel de lugares a visitar -->
 		<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
-
 			<div class="carousel-inner">
 				<div class="carousel-item active" data-bs-interval="2000">
-					<img src="img/cerro.jpeg" class="d-block w-100" alt="Cerro">
-					<div class="carousel-caption d-none d-md-block">
-						<h5>Conocé lugares y atractivos de la ciudad</h5>
-					</div>
+					<img src="img/cumbre.jpeg" class="d-block w-100" alt="Cerro">
 				</div>
 				<div class="carousel-item" data-bs-interval="2000">
-					<img src="img/comercios2.jpg" class="d-block w-100" alt="Comercios">
-					<div class="carousel-caption d-none d-md-block">
-						<h5>Te acercamos productos y servicios de nuestros comercios adheridos</h5>
-					</div>
+					<img src="img/cabaña.png" class="d-block w-100" alt="Comercios">
 				</div>
 				<div class="carousel-item" data-bs-interval="2000">
-					<img src="img/informes2.jpg" class="d-block w-100" alt="Informes">
-					<div class="carousel-caption d-none d-md-block">
-						<h5>Accedé a la información de la ciudad</h5>
-					</div>
+					<img src="img/cascada.jpeg" class="d-block w-100" alt="Informes">
 				</div>
 				<div class="carousel-item" data-bs-interval="2000">
-					<img src="img/asistencia2.jpg" class="d-block w-100" alt="Asistencia">
-					<div class="carousel-caption d-none d-md-block">
-						<h5>Estamos para cuidarte</h5>
-					</div>
+					<img src="img/cascada.jpeg" class="d-block w-100" alt="Informes">
+				</div>
+				<div class="carousel-item" data-bs-interval="2000">
+					<img src="img/mirador.png" class="d-block w-100" alt="Informes">
+				</div>
+				<div class="carousel-item" data-bs-interval="2000">
+					<img src="img/comercios2.jpg" class="d-block w-100" alt="Asistencia">
 				</div>
 			</div>
 			<button class="hidden carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
@@ -95,7 +106,7 @@
 				<span class="visually-hidden">Next</span>
 			</button>
 
-			<div class="carousel-indicators">
+			<!--<div class="carousel-indicators">
 				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
 					aria-current="true" aria-label="Slide 1"></button>
 				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1"
@@ -104,7 +115,7 @@
 					aria-label="Slide 3"></button>
 				<button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="3"
 					aria-label="Slide 3"></button>
-			</div>
+			</div>-->
 		</div>
 	</div>
 	
@@ -112,7 +123,7 @@
 	<section id="actividades">
 		<div class="row d-flex flex-row justify-content-center alig-items-center col-md-12 mt-3">
 			<div class="text-center col-md-6">
-				<img src="img/cascada.jpeg" class="img-circular col-md-12 mb-2" alt="Lugares y atractivos">
+				<img src="img/montaña.png" class="img-circular col-md-12 mb-2" alt="Lugares y atractivos">
 				<h4 class="card-text mt-3">Conocé los lugares que podés visitar y sus diferentes atractivos.</h4>
 				<a href="lugares.html" class="btn btn-outline-secondary own-btn">Ver más</a>
 			</div>

@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&display=swap');
+
 body{
 	background-color: whitesmoke;
 }
-
+#auspiciante{
+	font-family: Agbalumo;
+	font-size: 21px;
+	text-align: right;
+	position: absolute;
+	right: 140px;
+}
 .carousel { 
 	height: calc(100vh - 56px);
 }
@@ -32,7 +40,7 @@ a.carousel-control.left:hover{
 .hidden{
 	visibility: hidden;
 }
-h1, h3 {
+h1, h2, h3 {
 	color: #FFFFFF;
 	text-align: center;
 }
@@ -102,8 +110,33 @@ footer a{
 	color: #990000;
 	border: 1px solid #990000;
 }
-
-
+#nombreCiudad{
+	text-align: left;
+	text-shadow: 2px 2px #000;
+	position: absolute;
+	top: 150px;
+	left: 150px ;
+}
+#nombreCiudad h1, #nombreCiudad h3{
+	text-align: left;
+}
+.waviy {
+	position: relative;
+}
+.waviy span {
+	position: relative;
+	display: inline-block;
+	font-size: 48px;
+	font-weight: 600;
+	color: #fff;
+	animation: flip 2s 2;
+	animation-delay: calc(.1s * var(--i))
+}
+@keyframes flip {
+	0%,80% {
+		transform: rotateY(360deg) 
+	}
+}
 .own-btn:hover{
 	background-color: rgba(153, 0, 0, .5);
 }
