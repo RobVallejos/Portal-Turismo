@@ -48,14 +48,11 @@
 		if(results.length > 0){
 			for(var i=0; i < 15 ; i++){
 				contenido += "<div class='col-4 text-center'>"
-					contenido += "<div class='card border-info mb-3' style='height: 320px;'>";
+					contenido += "<div class='card border-info mb-3' style='height: 250px;'>";
 						contenido += "<div class='card-header'><h5>$ "+ results[i].price +"</h5></div>";
 						contenido += "<div class='card-body'>";
 							contenido += "<img src='"+ results[i].thumbnail +"' style='width: 100px; height: 100px;' class='img-fluid rounded-start' alt=''>";
-							contenido += "<h6 class='card-text'>"+ results[i].title +"</h6>";
-						contenido += "</div>";
-						contenido += "<div class='card-footer' style='border-top: 0; background-color: white;''>";
-							contenido += "<a href='#'' class='btn btn-info'>Seleccionar</a>";
+							contenido += "<h6 class='card-text mt-3'>"+ results[i].title +"</h6>";
 						contenido += "</div>";
 					contenido += "</div>";
 				contenido += "</div>";
