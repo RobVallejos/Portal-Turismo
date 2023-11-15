@@ -14,7 +14,7 @@ $(function(){
 		var contenidoC = "";
         centros = posic.centros;
         for(var i=0; i < centros.length ; i++){
-            contenidoC += "<div class='card-asist col-4 text-center'>"
+            contenidoC += "<div onclick='pickMarker(this);' id=" + centros[i].id + " class='card-asist col-4 text-center'>"
                 contenidoC += "<div id='asist" + centros[i].id + "' class='card mb-3'>";
                     contenidoC += "<div class='card-header'><h6>"+ centros[i].nombre +"</h6></div>";
                     contenidoC += "<div class='card-body text-start'>";
@@ -29,7 +29,7 @@ $(function(){
         let contenidoM = "";
         moviles = posic.moviles;
         for(var i=0; i < moviles.length ; i++){
-            contenidoM += "<div class='card-asist col-4 text-center'>"
+            contenidoM += "<div onclick='pickMarker(this);' id=" + moviles[i].id + " class='card-asist col-4 text-center'>"
                 contenidoM += "<div id='asist" + moviles[i].id + "' class='card mb-3'>";
                     contenidoM += "<div class='card-header'><h6>Móvil "+ moviles[i].id +"</h6></div>";
                     contenidoM += "<div class='card-body text-start'>";
@@ -42,8 +42,14 @@ $(function(){
         datosMoviles.html(contenidoM);
 	}
 
-    actualizarMapHeight();
+    //actualizarMapHeight();
 });
+
+function pickMarker(e){
+    var id = e.id
+    clickMarker(id);
+    cambiarBackground(id);
+}
 
 function cambiarBackground(id){
     quitarBackground();
@@ -63,10 +69,6 @@ function quitarBackground(){
         let cardM =  $("#asist" + m[i].id);
         cardM.removeClass("text-bg-warning");
     }
-}
-
-function tieneClass(e){
-    return e.hasClass("text-bg-warning")
 }
 
 function actualizarMapHeight(){
@@ -128,6 +130,4 @@ const posic = {
         }
     ]
 }
-
-
 
