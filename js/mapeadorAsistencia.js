@@ -31,8 +31,6 @@ function mapearCentrosMoviles(){
         maxZoom: 17,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
-
-    clickMarker();
 }
 
 function selectDivExterno(e){
